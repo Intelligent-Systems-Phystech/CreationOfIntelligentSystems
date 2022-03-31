@@ -1,0 +1,146 @@
+\documentclass[10pt,pdf,hyperref={unicode}]{beamer}
+
+\mode<presentation>
+{
+\usetheme{boxes}
+\beamertemplatenavigationsymbolsempty
+
+\setbeamertemplate{footline}[page number]
+\setbeamersize{text margin left=0.5em, text margin right=0.5em}
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{subfig}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{multicol}
+
+\usepackage[all]{xy}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows}
+
+\tikzstyle{name} = [parameters]
+\definecolor{name}{rgb}{0.5,0.5,0.5}
+
+\usepackage{caption}
+\captionsetup{skip=0pt,belowskip=0pt}
+
+\newtheorem{rustheorem}{Теорема}
+\newtheorem{russtatement}{Утверждение}
+\newtheorem{rusdefinition}{Определение}
+
+% colors
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\definecolor{darkcyan}{rgb}{0.0, 0.55, 0.55}
+
+\AtBeginEnvironment{figure}{\setcounter{subfigure}{0}}
+
+\captionsetup[subfloat]{labelformat=empty}
+
+%----------------------------------------------------------------------------------------------------------
+
+\title[Вводная лекция]{Создание Интеллектуальных Систем \\ Код Вычислительного Эксперимента}
+\author{А.\,В.\,Грабовой, О.\,Ю.\,Бахтеев}
+
+\institute[]{Московский физико-технический институт}
+% \date[2022]{\small 10\;февраля\;2022\,г.}
+
+%---------------------------------------------------------------------------------------------------------
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------
+\section{Требования}
+\begin{frame}{Требования}
+\bigskip
+
+\begin{enumerate}
+    \item Существование проекта согласно шаблона$^*$.
+    \item Полнота документации кода.
+    \item Наглядность работы модели.
+    \item Код должен быть структурирован.
+    \item Проверка корректности кода.
+    \item Результаты эксперимента должны быть воспреизведимы.
+    \item Оформление кода.
+\end{enumerate}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------
+\section{Существование проекта согласно шаблона}
+\begin{frame}{Существование проекта согласно шаблона}
+\bigskip
+\begin{enumerate}
+    \item Репозиторий должен быть создан согласно шаблону. Все заглушечные функции и readme.md должны быть адаптированы под проект. Шаблон репозитория по ссылке: \url{https://github.com/Intelligent-Systems-Phystech/ProjectTemplate}.
+    \item Информация о репозитории должна быть внесена в файл с проектами: \url{https://github.com/Intelligent-Systems-Phystech/.github/blob/master/profile/repository_structure_rtfm.md}.
+\end{enumerate}
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------------
+\section{Полнота документации кода}
+\begin{frame}{Полнота документации кода}
+\bigskip
+\begin{enumerate}
+    \item Все функции и классы кода прокомментированы достаточно полно, прописано описание параметров, выхода.
+    \item Документация, а также *md-файлы должны быть хорошо и аккуратно оформлены.
+    \item Настроена генерация sphinx документации и размещение в github pages (из шаблона).
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\section{Наглядность результатов}
+\begin{frame}{Наглядность результатов}
+\bigskip
+\begin{enumerate}
+    \item В репозитории находится ноутбук-демонстрация основных результатов, максимально наглядно и иллюстративно описывающий проделанную работу.
+    \item В readme должны содержаться ссылки на демо, а также шаги для его запуска.
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\section{Структурирование кода}
+\begin{frame}{Структурирование кода}
+\bigskip
+\begin{enumerate}
+    \item Код логически разнесен по модулям и пакетам.
+    \item Основной код работы должен быть вынесен за пределы ноутбуков, демонстраций и пр.
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\section{Корректность кода}
+\begin{frame}{Корректность кода}
+\bigskip
+\begin{enumerate}
+    \item Для основного кода работы написаны тесты, проверяющие корректность работы функцией и классов.
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\section{Воспроизведимость результатов}
+\begin{frame}{Воспроизведимость результатов}
+\bigskip
+\begin{enumerate}
+    \item В репозитории явно указаны шаги для запуска экспериментов и демонстраций, с указанием ОС, установленных пакетов и их версий.
+    \item Для python-проектов плюсом будет наличие файла requirements.txt.
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\section{Оформление кода}
+\begin{frame}{Оформление кода}
+\bigskip
+\begin{enumerate}
+    \item Код оформлен в соответствии с соглашениями, принятыми в языке программирования (PEP-8).
+    \item В случае отсутствия явных соглашений, требуется руководствоваться принципом разумности.
+\end{enumerate}
+\end{frame}
+
+\end{document}
